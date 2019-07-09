@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Todoinput extends Component {
+export default class TodoItem extends Component {
     render() {
         return (
             <div>
-                hello from to do input
+                hello from the item
             </div>
         )
     }
