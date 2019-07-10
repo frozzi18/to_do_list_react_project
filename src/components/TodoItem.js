@@ -9,6 +9,11 @@ export default class TodoItem extends Component {
                 <div className="todo-icon">
                     <span className="mx-2 text-success">
                         <i className="fas fa-pen">
+
+                        </i>
+                    </span>
+                    <span className="mx-2 text-danger">
+                        <i className="fas fa-trash">
                             
                         </i>
                     </span> 
