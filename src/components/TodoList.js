@@ -11,7 +11,11 @@ export default class TodoList extends Component {
                 </h3>
                 
                 {items.map(item => {
-                    return <TodoItem key={item.id} title={item.title}/>;                       
+                    return <TodoItem 
+                            key={item.id} 
+                            title={item.title}
+                            handleDelete={() => handleDelete(item.id)}
+                    />;                       
                 })}         
                              
 
