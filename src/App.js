@@ -9,7 +9,7 @@ import uuid from 'uuid';
 class App extends Component {
   state = {
     items:[],
-    id:0,
+    id:uuid(),
     item:'',
     editItem:false
   }
@@ -21,6 +21,21 @@ class App extends Component {
   }
 
   handleSubmit = (e) =>{
+    e.preventDefault();
+    const newItem = {
+      id:this.state.id,
+      item:this.state.item
+    }
+    console.log(newItem);
+    const updatedItems = [...this.state.items,newItem]
+
+    this.setState({
+       items: updatedItems, 
+       item:'',
+       id:uuid(),
+       editItem:false
+      
+    })
 
   }
 
