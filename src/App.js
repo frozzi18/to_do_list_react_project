@@ -52,6 +52,10 @@ class App extends Component {
       })
   }
 
+  handleEdit = id =>{
+
+  }
+
   render(){
     return (
       <div className="container">
@@ -67,7 +71,8 @@ class App extends Component {
             <TodoList 
             items={this.state.items} 
             clearList={this.clearList} 
-            handleDelete={this.handleDelete}/>
+            handleDelete={this.handleDelete}
+            handleEdit={this.handleEdit}/>
           </div>
         </div>
       </div>
