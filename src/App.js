@@ -26,7 +26,6 @@ class App extends Component {
       id:this.state.id,
       title:this.state.item
     }
-    console.log(newItem);
     const updatedItems = [...this.state.items,newItem]
 
     this.setState({
@@ -37,6 +36,12 @@ class App extends Component {
       
     })
 
+  }
+
+  clearList = () =>{
+    this.setState({
+      items:[]
+    })
   }
 
   render(){
@@ -51,7 +56,7 @@ class App extends Component {
             item={this.state.item} 
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}/>
-            <TodoList items={this.state.items}/>
+            <TodoList items={this.state.items} clearList={this.clearList} />
           </div>
         </div>
       </div>
