@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class Todoinput extends Component {
     render() {
-        const {item, handleChange, handleSubmit} = this.props
+        const {item, handleChange, handleSubmit, editItem} = this.props
         return <div className="card card-body my-3">
             <form onSubmit={handleSubmit}>
                 <div className="input-group">
